@@ -32,35 +32,38 @@
         align-items: center;
         height: 100vh;
         width: 100vw;
-        background-color: brown;
+        background-color: #fff;
         font-family: "Inter", sans-serif;
       }
       nav {
         display: flex;
         justify-content: flex-end;
-        background-color: blueviolet;
+
         height: 5vh;
-        width: 90vw;
+        width: 100%;
       }
       nav img {
         height: 100%;
       }
       .container {
-        width: 90%;
+        width: 80%;
         height: 90%;
-        background-color: coral;
 
         overflow: hidden;
       }
 
       a {
         text-decoration: none;
-        color: aliceblue;
+        color: hsl(236, 13%, 42%);
+        transition: 0.3s;
+      }
+      a:hover {
+        color: hsl(5, 85%, 63%);
       }
       nav > a {
         padding: 1vh;
-        background-color: rgb(127, 150, 255);
-        margin-left: 5vh;
+
+        margin-left: 4vh;
       }
       nav > img {
         margin-right: auto;
@@ -68,21 +71,74 @@
       .lp {
         width: 65%;
         margin-right: 5%;
-        background-color: aqua;
+      }
+      .lp > header > h1 {
+        width: 50%;
+        font-size: 3.5rem;
+      }
+      .lp > header {
+        display: flex;
+      }
+      .lp > header > div > p {
+        margin-top: 2vh;
+        color: hsl(236, 13%, 42%);
+      }
+      .lp > header > div {
+        width: 50%;
+      }
+      button {
+        border: 0;
+        background-color: hsl(240, 100%, 5%);
+        cursor: pointer;
+        padding: 2vh 6vh;
+        margin: 5vh 0;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: 0.2rem;
+        transition: 0.3s;
+      }
+      button:hover {
+        background-color: hsl(5, 85%, 63%);
+      }
+      .lp img {
+        width: 100%;
+        height: 50%;
       }
       .pp {
-        width: 25%;
-        margin-right: 5%;
-        background-color: rgb(51, 255, 0);
+        width: 30%;
+        padding: 2vh;
+        background-color: hsl(240, 100%, 5%);
+        color: hsl(35, 77%, 62%);
       }
+      .pp > h3 {
+        margin-top: 3vh;
+        margin-bottom: 0.5vh;
+        color: hsl(36, 100%, 99%);
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      .pp > h3:hover {
+        color: hsl(35, 77%, 62%);
+      }
+      .pp > p {
+        padding-bottom: 3vh;
+        border-bottom: 2px solid hsl(233, 8%, 79%);
+        color: hsl(233, 8%, 79%);
+        font-size: 1rem;
+      }
+      .pp > p:last-child {
+        border-bottom: none;
+      }
+
       .panels {
         margin-top: 5vh;
         margin-bottom: 5vh;
-        height: 50vh;
+        height: 55vh;
         display: flex;
       }
       .belt {
-        height: 35vh;
+        height: 18vh;
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -90,7 +146,33 @@
       .beltItem {
         height: 100%;
         width: 30%;
-        background-color: darkolivegreen;
+        display: flex;
+        cursor: pointer;
+      }
+
+      .beltItem > img {
+        width: 30%;
+        height: 100%;
+      }
+
+      .beltItem > div {
+        margin-left: 5%;
+        flex-direction: column;
+        display: flex;
+        justify-content: space-around;
+      }
+      .beltItem > div > h1 {
+        color: hsl(233, 8%, 79%);
+      }
+      .beltItem > div > h3 {
+        color: hsl(240, 100%, 5%);
+        transition: 0.3s;
+      }
+      .beltItem > div > h3:hover {
+        color: hsl(5, 85%, 63%);
+      }
+      .beltItem > div > p {
+        color: hsl(236, 13%, 42%);
       }
     </style>
   </head>
@@ -106,31 +188,63 @@
       </nav>
       <div class="panels">
         <div class="lp">
-          The Bright Future of Web 3.0? We dive into the next evolution of the
-          web that claims to put the power of the platforms back into the hands
-          of the people. But is it really fulfilling its promise? Read more
+          <img src="./assets/images/image-web-3-desktop.jpg" alt="error" />
+          <header>
+            <h1>The Bright Future of Web 3.0?</h1>
+            <div>
+              <p>
+                We dive into the next evolution of the web that claims to put
+                the power of the platforms back into the hands of the people.
+                But is it really fulfilling its promise?
+              </p>
+              <button>Read more</button>
+            </div>
+          </header>
         </div>
         <div class="pp">
-          New Hydrogen VS Electric Cars Will hydrogen-fueled cars ever catch up
-          to EVs? The Downsides of AI Artistry What are the possible adverse
-          effects of on-demand AI image generation? Is VC Funding Drying Up?
-          Private funding by VC firms is down 50% YOY. We take a look at what
-          that means.
+          <h1>New</h1>
+          <h3>Hydrogen VS Electric Cars</h3>
+          <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+          <h3>The Downsides of AI</h3>
+          <p>
+            Artistry What are the possible adverse effects of on-demand AI image
+            generation?
+          </p>
+          <h3>Is VC Funding Drying Up?</h3>
+          <p>
+            Private funding by VC firms is down 50% YOY. We take a look at what
+            that means.
+          </p>
         </div>
       </div>
 
       <div class="belt">
         <div class="beltItem">
-          01 Reviving Retro PCs What happens when old PCs are given modern
-          upgrades?
+          <img src="./assets/images/image-retro-pcs.jpg" alt="damn" />
+          <div>
+            <h1>01</h1>
+
+            <h3>Reviving Retro PCs</h3>
+            <p>What happens when old PCs are given modern upgrades?</p>
+          </div>
         </div>
         <div class="beltItem">
-          02 Top 10 Laptops of 2022 Our best picks for various needs and
-          budgets.
+          <img src="./assets/images/image-top-laptops.jpg" alt="damn" />
+          <div>
+            <h1>02</h1>
+
+            <h3>Top 10 Laptops of 2022</h3>
+            <p>Our best picks for various needs and budgets.</p>
+          </div>
         </div>
         <div class="beltItem">
-          03 The Growth of Gaming How the pandemic has sparked fresh
-          opportunities.
+          <img src="./assets/images/image-gaming-growth.jpg" alt="damn" />
+          <div>
+            <h1>03</h1>
+
+            <h3>The Growth of Gaming</h3>
+            <p>How the pandemic has sparked fresh opportunities.</p>
+          </div>
         </div>
       </div>
     </div>
